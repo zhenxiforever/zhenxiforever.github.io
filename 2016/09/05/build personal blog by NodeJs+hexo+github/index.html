@@ -5,29 +5,33 @@
   
   <title>使用NodeJs+hexo+github搭建个人博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；
+  <meta name="description" content="[TOC]
+本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；基本步骤如下图：
 名词hexohexo
 NodejsNodejs
 githubgithub
-Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个环境，不需要其他的一些工具，简单的安装 GitForWindows  就行了，需要注意的时，在安装时选择 Run Git from the">
+Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个环境，不需要其他的一些工具，简单的安装 GitForWindows  就行了，需要注意的时，在安装时选择 Run">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用NodeJs+hexo+github搭建个人博客">
 <meta property="og:url" content="http://yoursite.com/2016/09/05/build personal blog by NodeJs+hexo+github/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；
+<meta property="og:description" content="[TOC]
+本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；基本步骤如下图：
 名词hexohexo
 NodejsNodejs
 githubgithub
-Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个环境，不需要其他的一些工具，简单的安装 GitForWindows  就行了，需要注意的时，在安装时选择 Run Git from the">
+Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个环境，不需要其他的一些工具，简单的安装 GitForWindows  就行了，需要注意的时，在安装时选择 Run">
 <meta property="og:image" content="http://yoursite.com/../../image/hexo.png">
-<meta property="og:updated_time" content="2016-09-05T04:59:54.158Z">
+<meta property="og:image" content="http://yoursite.com/Users/smile/Desktop/屏幕快照 2016-09-04 下午6.48.49.png">
+<meta property="og:updated_time" content="2016-09-05T06:12:28.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用NodeJs+hexo+github搭建个人博客">
-<meta name="twitter:description" content="本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；
+<meta name="twitter:description" content="[TOC]
+本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；基本步骤如下图：
 名词hexohexo
 NodejsNodejs
 githubgithub
-Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个环境，不需要其他的一些工具，简单的安装 GitForWindows  就行了，需要注意的时，在安装时选择 Run Git from the">
+Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个环境，不需要其他的一些工具，简单的安装 GitForWindows  就行了，需要注意的时，在安装时选择 Run">
 <meta name="twitter:image" content="http://yoursite.com/../../image/hexo.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -99,7 +103,8 @@ Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；<br><img src="../../image/hexo.png" alt="hexo"></p>
+        <p>[TOC]</p>
+<p>本文详细描述如何使用hexo在github上搭建属于自己的博客[Windows和linux(Centos)]上；基本步骤如下图：<br><img src="../../image/hexo.png" alt="hexo"></p>
 <h2 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h2><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><p><a href="https://hexo.io/" target="_blank" rel="external">hexo</a></p>
 <h3 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h3><p><a href="https://nodejs.org/" target="_blank" rel="external">Nodejs</a></p>
 <h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><p><a href="https://github.com/" target="_blank" rel="external">github</a></p>
@@ -107,21 +112,137 @@ Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个�
 <ul>
 <li>配置用户名和邮箱 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">	git config user.name <span class="string">"username"</span> <span class="comment">#github 用户名称</span></div><div class="line">	git config user.email <span class="string">"email"</span> <span class="comment">#github邮箱帐号</span></div><div class="line">```  </div><div class="line"></div><div class="line">+ Github SSH Key 配置  </div><div class="line">  在推送文章同步到Github时，使用ssh进行验证可以免于输入账户和密码。  </div><div class="line">	1. 首先在Git Bash使用命令`ssh-keygen -t rsa -b 4096 -C <span class="string">"your email"</span>`生成公钥和私钥，运行该命令后会有提示的输入信息，可以直接回车跳过。</div><div class="line">	2. 添加私钥到ssh。这时有可能ssh-agent没有启动，可以现在Git Bash中运行命令`<span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>`来启动，然后运行`ssh-add 私钥名称`添加私钥。（默认的私钥名称是**rsa**，如果在生成私钥时设定了名称，就输入上次设定的名称）。</span></div><div class="line">	3. 添加公钥到Github的账号。首先使用命令`clip &lt; rsa.pub` 将公钥的内容复制到剪贴板，然后登录Github，选择settings &gt; SSH Keys &gt; New SSH Key ，将公钥内容粘贴过去，点击 Add New SSH即可。</div><div class="line">	4. 验证ssh的配置是否成功。上述步骤完成后，在Git Bash中运行命令`ssh -T git@github.com`，根据提示信息判断ssh的配置是否成功。  </div><div class="line">      </div><div class="line">**2.  hexo配置**  </div><div class="line"></div><div class="line">* hexo 安装配置需要 Nodejs 的npm命令，首先下载[Nodejs](https://nodejs.org/en/download/),再安装，window安装就直接 下一步下一步就ok了；</div><div class="line">* 接着是安装hexo，使用npm安装hexo `npm install -g hexo` (参数g表示的hexo是全局安装);</div><div class="line">* 下载安装好后，cd进入创立blog的文件夹下执行命令 `hexo init`，进行hexo的初始化；_(在git的命令窗口执行命令，因会用到git命令下载代码)_</div><div class="line">* 初始化完成之后，文件夹会多很多文件，再执行命令` npm install `下载hexo所需的依赖项；</div><div class="line">* 至此，hexo的配置基本完成，可执行 ` hexo s `，然后访问地址 _http://localhost:4000_ 查看效果。_（hexo默认的端口号是4000，但是4000端口如果被其他进程占用的话，这时访问localhost:4000会得不到响应。解决这个问题的方法是指定其他的端口 ` hexo server -p 8081 ` ，访问localhost:8081）_ </div><div class="line"></div><div class="line">**3.   关联github以及部署**  </div><div class="line"></div><div class="line">* 在github上新建一个repository保存Blog的页面。这里需要注意的是repository 的name有个特别的限定，就是你的github的username.github.io。（例如，我的github的用户名是_zhenxiforever_，那么我新建的repsoitory name就是 _zhenxiforever.github.io_）  </div><div class="line">* 修改配置文件。首先打开Blog根目录下面的_config.yml，在里面添加deploy到Github上所需要的信息</div></pre></td></tr></table></figure>
-<pre><code>deploy:
-  type: git
-      repository: ssh://git@github.com/zhenxiforever/zhenxiforever.github.io.git
- branch: master
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 将Blog部署到Github。在deploy之前，需要运行命令`hexo g`重新生成（修改过_config.yml或者文章后都要记得执行下该命令），然后运行 ` hexo d ` 命令就会将Blog的内容推送到Githu。部署完成后，访问**usernmae.github.io**就可以查看你的Blog内容了。</div><div class="line">* hexo主题的使用。hexo有很多的主题，并且使用也非常的方便。例如要使用yilia这款主题，可以在Blog的根目录下运行</div><div class="line">``` bash</div><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$git</span> config user.name <span class="string">"username"</span> <span class="comment">#github 用户名称</span></div><div class="line"><span class="variable">$git</span> config user.email <span class="string">"email"</span> <span class="comment">#github邮箱帐号</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Github SSH Key 配置<br>在推送文章同步到Github时，使用ssh进行验证可以免于输入账户和密码。  <ol>
+<li>首先在Git Bash使用命令<code>ssh-keygen -t rsa -b 4096 -C &quot;your email&quot;</code>生成公钥和私钥，运行该命令后会有提示的输入信息，可以直接回车跳过。</li>
+<li>添加私钥到ssh。这时有可能ssh-agent没有启动，可以现在Git Bash中运行命令<code>eval &quot;$(ssh-agent -s)</code>来启动，然后运行<code>ssh-add 私钥名称</code>添加私钥。（默认的私钥名称是<strong>rsa</strong>，如果在生成私钥时设定了名称，就输入上次设定的名称）。</li>
+<li>添加公钥到Github的账号。首先使用命令<code>clip &lt; rsa.pub</code> 将公钥的内容复制到剪贴板，然后登录Github，选择settings &gt; SSH Keys &gt; New SSH Key ，将公钥内容粘贴过去，点击 Add New SSH即可。</li>
+<li>验证ssh的配置是否成功。上述步骤完成后，在Git Bash中运行命令<code>ssh -T git@github.com</code>，根据提示信息判断ssh的配置是否成功。  </li>
+</ol>
+</li>
+</ul>
+<p><strong>2.  hexo配置</strong>  </p>
+<ul>
+<li>hexo 安装配置需要 Nodejs 的npm命令，首先下载<a href="https://nodejs.org/en/download/" target="_blank" rel="external">Nodejs</a>,再安装，window安装就直接 下一步下一步就ok了；</li>
+<li>接着是安装hexo，使用npm安装hexo <code>npm install -g hexo</code> (参数g表示的hexo是全局安装);</li>
+<li>下载安装好后，cd进入创立blog的文件夹下执行命令 <code>hexo init</code>，进行hexo的初始化；<em>(在git的命令窗口执行命令，因会用到git命令下载代码)</em></li>
+<li>初始化完成之后，文件夹会多很多文件，再执行命令<code>npm install</code>下载hexo所需的依赖项；</li>
+<li>至此，hexo的配置基本完成，可执行 <code>hexo s</code>，然后访问地址 <em><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></em> 查看效果。<em>（hexo默认的端口号是4000，但是4000端口如果被其他进程占用的话，这时访问localhost:4000会得不到响应。解决这个问题的方法是指定其他的端口 <code>hexo server -p 8081</code> ，访问localhost:8081）</em> </li>
+</ul>
+<p><strong>3.   关联github以及部署</strong>  </p>
+<ul>
+<li>在github上新建一个repository保存Blog的页面。这里需要注意的是repository 的name有个特别的限定，就是你的github的username.github.io。（例如，我的github的用户名是<em>zhenxiforever</em>，那么我新建的repsoitory name就是 <em>zhenxiforever.github.io</em>）  </li>
+<li>修改配置文件。首先打开Blog根目录下面的_config.yml，在里面添加deploy到Github上所需要的信息  </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  	type: git</div><div class="line">  	repository: ssh://git@github.com/zhenxiforever/zhenxiforever.github.io.git</div><div class="line"> 	branch: master</div></pre></td></tr></table></figure>
+<ul>
+<li>将Blog部署到Github。在deploy之前，需要运行命令<code>hexo g</code>重新生成（修改过_config.yml或者文章后都要记得执行下该命令），然后运行 <code>hexo d</code> 命令就会将Blog的内容推送到Githu。部署完成后，访问<strong>usernmae.github.io</strong>就可以查看你的Blog内容了。</li>
+<li>hexo主题的使用。hexo有很多的主题，并且使用也非常的方便。例如要使用yilia这款主题，可以在Blog的根目录下运行<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>然后修改_config.yml的theme项为yilia就可以了。</p>
 <ul>
 <li>添加新文章。运行命令<code>hexo n &quot;filename&quot;</code>会在source/_posts/filename.md，编辑该md文件后，运行<code>hexo g</code>和<code>hexo d</code>命令就可以在github上看到你的新文章;</li>
 </ul>
-<h2 id="CentOS-搭建步骤"><a href="#CentOS-搭建步骤" class="headerlink" title="CentOS 搭建步骤"></a>CentOS 搭建步骤</h2>
+<h2 id="CentOS-搭建步骤"><a href="#CentOS-搭建步骤" class="headerlink" title="CentOS 搭建步骤"></a>CentOS 搭建步骤</h2><p>本文详细描述如何在Linux（本人CentOS开发环境）下使用hexo在github上搭建属于自己的博客</p>
+<p>搭建分为两步：</p>
+<p>使用Hexo 搭建本地blog<br>在github建立x.github.com 项目，并将本地hexo推送到github上；（<strong>X 必须为自己github上用户名，一个用户名只能创建一个</strong>）；  </p>
+<h2 id="基础环境"><a href="#基础环境" class="headerlink" title="基础环境"></a>基础环境</h2><ul>
+<li>安装git</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[smile@smile ~]$ sudo yum install git</div></pre></td></tr></table></figure>
+<ul>
+<li>下载安装Node.js</li>
+</ul>
+<blockquote>
+<ul>
+<li>准备命令  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;  [smile@smile ~]$ sudo yum -y install gcc make gcc-c++ openssl-devel wget</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<pre><code>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">&gt;* 下载源码及解压</div><div class="line">&gt;  ```bash</div><div class="line">&gt;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+
+[smile@smile ~]$ wget http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz   
+[smile@smile nodejs]$ tar -zvxf node-v0.10.26.tar.gz
+​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;* 编译及安装(*需要用root 用户安装*)</div><div class="line">&gt;  ```bash</div><div class="line">&gt;  [smile@smile node-v0.10.26]$ su root </div><div class="line">&gt;  [root@smile node-v0.10.26]# ./configure --prefix=/usr/local/bin/node/0.10.26</div><div class="line">&gt;  [root@smile node-v0.10.26]# make &amp;&amp; make install</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>  ＊ <em>如需重新编译 需要先 clean: <code>make clean</code>;</em></p>
+<ul>
+<li>配置环境变量</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">    [root@smile node-v0.10.26]<span class="comment"># vi /etc/profile</span></div><div class="line">___</div><div class="line"><span class="built_in">export</span> NODEJS\_HOME=/usr/<span class="built_in">local</span>/bin/node/0.10.26</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODEJS</span>\_HOME/bin:<span class="variable">$PATH</span></div><div class="line">___</div><div class="line">[root@smile node-v0.10.26]<span class="comment"># source /etc/profile</span></div></pre></td></tr></table></figure>
+<ul>
+<li>验证是否安装配置成功<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@smile node-v0.10.26]<span class="comment"># node -v</span></div><div class="line">v0.10.26</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>下载安装hexo   </li>
+</ul>
+<p>​<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@smile node-v0.10.26]<span class="comment"># npm install -g hexo</span></div></pre></td></tr></table></figure></p>
+<p>##开始搭建博客</p>
+<blockquote>
+<ul>
+<li>hexo初始化  </li>
+</ul>
+</blockquote>
+<p>​<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[smile@smile ~]$ mkdir -p code/gitblog</div><div class="line">[smile@smile ~]$ <span class="built_in">cd</span> code/gitblog</div><div class="line">[smile@smile gitblog]$ hexo init</div></pre></td></tr></table></figure></p>
+<blockquote>
+<ul>
+<li>安装依赖包</li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[smile@smile gitblog]$ npm install</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>启动本地服务[生成静态页，启动]</li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[smile@smile gitblog]$ hexo s -g</div><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>访问本地地址<a href="http://localhost:4000/，查看如下，则启动成功：" target="_blank" rel="external">http://localhost:4000/，查看如下，则启动成功：</a>  </li>
+</ul>
+</blockquote>
+<p><img src="/Users/smile/Desktop/屏幕快照 2016-09-04 下午6.48.49.png" alt="index"></p>
+<ul>
+<li>注：<strong>(hexo 也支持简单命令格式，比如：<em><code>hexo g = hexo generate</code></em> [生成静态页] ， <em><code>hexo d =hexo deploy</code></em>［部署至远端］ ，hexo s = <em><code>hexo server</code></em>［启动服务］ ，<em><code>hexo n = hexo new</code></em>[写博客])</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>hexo配置文件_config.xml  </li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"># Site站点配置</div><div class="line">title: Hexo #网站标题</div><div class="line">subtitle: #网站子标题</div><div class="line">description:网站描述</div><div class="line">author: John Doe #网站作者</div><div class="line">language:</div><div class="line">timezone:</div><div class="line"></div><div class="line"># Header </div><div class="line">menu: #博客导航菜单</div><div class="line">  Home: /</div><div class="line">  Archives: archives</div><div class="line">  Categories: categories</div><div class="line">  Tags: tags</div><div class="line">  About: about</div><div class="line"></div><div class="line"># URL</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://www.itbulu.com #网站域名</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/ #日志格式</div><div class="line">permalink_defaults:</div><div class="line"># Directory文件夹配置目录</div><div class="line">source_dir: source</div><div class="line">public_dir: public</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang</div><div class="line">skip_render:</div><div class="line"># Writing</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">external_link: true # Open external links in new tab</div><div class="line">filename_case: 0</div><div class="line">render_drafts: false</div><div class="line">post_asset_folder: false</div><div class="line">relative_link: false</div><div class="line">future: true</div><div class="line">highlight:</div><div class="line">enable: true</div><div class="line">line_number: true</div><div class="line">auto_detect: true</div><div class="line">tab_replace:</div><div class="line"># Category &amp; Tag</div><div class="line">default_category: uncategorized</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"># Date / Time format</div><div class="line">## Hexo uses Moment.js to parse and display date</div><div class="line">## You can customize the date format as defined in</div><div class="line">## http://momentjs.com/docs/#/displaying/format/</div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"># Pagination</div><div class="line">## Set per_page to 0 to disable pagination</div><div class="line">per_page: 10</div><div class="line">pagination_dir: page</div><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: landscape #使用的主题,可下载放在themes目录中，使用对应的主题目录</div></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般我们修改站点信息，以及需要更换的主题就可以，其他默认;如下载主题，可用git clone 相关主题至themes文件夹下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/cnfeat/cnfeat.git themes/jacman</div></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>hexo创建页面写博客[博客采用markdown语法]</li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo n <span class="string">"博文标题"</span>   </div><div class="line">$ hexo n page <span class="string">"About"</span>    //创建页面</div></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;然后会在”source/<em>posts/博文标题.md”创建一个根文件。我们需要编辑此文件。__博客采用markdown语法</em>.  </p>
+<pre>
+    title:
+    date:
+    tags:
+</pre>
+
+
+
+
+
+</blockquote>
+</blockquote>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/05/build personal blog by NodeJs+hexo+github/" data-id="cisph3s0m00000cg3h64yzxik" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/05/build personal blog by NodeJs+hexo+github/" data-id="cispnja350000b0g3wod01wdy" class="article-share-link">Share</a>
       
       
     </footer>
