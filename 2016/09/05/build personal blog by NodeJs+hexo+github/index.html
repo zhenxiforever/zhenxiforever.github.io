@@ -23,7 +23,7 @@ githubgithub
 Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个环境，不需要其他的一些工具，简单的安装 GitForWindows  就行了，需要注意的时，在安装时选择 Run">
 <meta property="og:image" content="http://yoursite.com/../../image/hexo.png">
 <meta property="og:image" content="http://yoursite.com/Users/smile/Desktop/屏幕快照 2016-09-04 下午6.48.49.png">
-<meta property="og:updated_time" content="2016-09-05T06:24:47.203Z">
+<meta property="og:updated_time" content="2016-09-05T06:29:43.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用NodeJs+hexo+github搭建个人博客">
 <meta name="twitter:description" content="[TOC]
@@ -159,14 +159,14 @@ Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个�
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[smile@smile ~]$ sudo yum -y install gcc make gcc-c++ openssl-devel wget</div></pre></td></tr></table></figure>
 </li>
 <li><p>下载源码及解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">	[smile@smile ~]$ wget http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz   </div><div class="line">	[smile@smile nodejs]$ tar -zvxf node-v0.10.26.tar.gz</div><div class="line">​</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> [smile@smile ~]$ wget http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz   </div><div class="line"> [smile@smile nodejs]$ tar -zvxf node-v0.10.26.tar.gz</div><div class="line">​</div></pre></td></tr></table></figure>
 </li>
 <li><p>编译及安装(<em>需要用root 用户安装</em>)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[smile@smile node-v0.10.26]$ su root </div><div class="line">[root@smile node-v0.10.26]<span class="comment"># ./configure --prefix=/usr/local/bin/node/0.10.26</span></div><div class="line">[root@smile node-v0.10.26]<span class="comment"># make &amp;&amp; make install</span></div></pre></td></tr></table></figure>
 <p>＊ <em>如需重新编译 需要先 clean: <code>make clean</code>;</em></p>
 </li>
 <li><p>配置环境变量  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">    [root@smile node-v0.10.26]<span class="comment"># vi /etc/profile</span></div><div class="line">___</div><div class="line"><span class="built_in">export</span> NODEJS\_HOME=/usr/<span class="built_in">local</span>/bin/node/0.10.26</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODEJS</span>\_HOME/bin:<span class="variable">$PATH</span></div><div class="line">___</div><div class="line">[root@smile node-v0.10.26]<span class="comment"># source /etc/profile</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[root@smile node-v0.10.26]<span class="comment"># vi /etc/profile</span></div><div class="line">___</div><div class="line"><span class="built_in">export</span> NODEJS\_HOME=/usr/<span class="built_in">local</span>/bin/node/0.10.26</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODEJS</span>\_HOME/bin:<span class="variable">$PATH</span></div><div class="line">___</div><div class="line">[root@smile node-v0.10.26]<span class="comment"># source /etc/profile</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>验证是否安装配置成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@smile node-v0.10.26]<span class="comment"># node -v</span></div><div class="line">v0.10.26</div></pre></td></tr></table></figure>
@@ -176,8 +176,7 @@ Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个�
 <li><p>下载安装hexo<br>​<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@smile node-v0.10.26]<span class="comment"># npm install -g hexo</span></div></pre></td></tr></table></figure></p>
 </li>
 </ul>
-<p>##开始搭建博客</p>
-<ul>
+<h2 id="开始搭建博客"><a href="#开始搭建博客" class="headerlink" title="开始搭建博客"></a>开始搭建博客</h2><ul>
 <li><p>hexo初始化<br>​<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[smile@smile ~]$ mkdir -p code/gitblog</div><div class="line">[smile@smile ~]$ <span class="built_in">cd</span> code/gitblog</div><div class="line">[smile@smile gitblog]$ hexo init</div></pre></td></tr></table></figure></p>
 </li>
 <li><p>安装依赖包</p>
@@ -186,7 +185,7 @@ Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个�
 <li><p>启动本地服务[生成静态页，启动]</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[smile@smile gitblog]$ hexo s -g</div><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
 </li>
-<li><p>访问本地地址<a href="http://localhost:4000/，查看如下，则启动成功：" target="_blank" rel="external">http://localhost:4000/，查看如下，则启动成功：</a>  </p>
+<li><p>访问本地地址<code>http://localhost:4000/</code>，查看如下，则启动成功：  </p>
 </li>
 </ul>
 <p><img src="/Users/smile/Desktop/屏幕快照 2016-09-04 下午6.48.49.png" alt="index"></p>
@@ -217,7 +216,7 @@ Windows 搭建步骤环境安装1.  安装配置git由于这里只是搭建个�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/05/build personal blog by NodeJs+hexo+github/" data-id="cispnx6sc0001owg39v6qoebh" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/05/build personal blog by NodeJs+hexo+github/" data-id="cispo3uxe0000pcg3ck8vcsi4" class="article-share-link">Delen</a>
       
       
     </footer>
